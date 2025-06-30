@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My NewApplication</string>
+    <string name="underlined_text"><u>Register</u></string>
+    <string name="logout">Logout</string>
+</resources>
