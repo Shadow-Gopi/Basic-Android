@@ -18,6 +18,7 @@ import com.gopi.mynewapplication.R;
 import com.gopi.mynewapplication.data.database.AppDatabase;
 import com.gopi.mynewapplication.databinding.FragmentSignInBinding;
 import com.gopi.mynewapplication.ui.home.HomeActivity;
+import com.gopi.mynewapplication.ui.todo.TodoActivity;
 import com.gopi.mynewapplication.util.SharedPrefHelper;
 
 import java.util.Objects;
@@ -25,6 +26,7 @@ import java.util.Objects;
 public class SignInFragment extends Fragment {
     FragmentSignInBinding binding;
     private LoginViewModel viewModel;
+    private SharedPrefHelper sharedPrefHelper;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class SignInFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+        sharedPrefHelper = SharedPrefHelper.getInstance(requireContext());
 
         //Register button
         binding.tvRegister.setOnClickListener(v -> {
@@ -59,9 +62,9 @@ public class SignInFragment extends Fragment {
                         // passwor check
 
                         if(password.equals(storedPassword)){
-                            Intent intent = new Intent(requireContext(), HomeActivity.class);
-                            SharedPrefHelper.getInstance(requireContext()).setUserName(userName);
-                            startActivity(new Intent(requireContext(), HomeActivity.class));
+                            Intent intent = new Intent(requireContext(), TodoActivity.class);
+                            sharedPrefHelper.setUserName(userName);
+                            startActivity(intent);
                             requireActivity().finish();
                             Toast.makeText(requireContext(), "Login Sucessfull", Toast.LENGTH_SHORT).show();
                         }else {

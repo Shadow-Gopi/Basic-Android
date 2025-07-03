@@ -18,6 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.gopi.mynewapplication.R;
 import com.gopi.mynewapplication.databinding.ActivityLoginBinding;
 import com.gopi.mynewapplication.ui.home.HomeActivity;
+import com.gopi.mynewapplication.ui.todo.TodoActivity;
 import com.gopi.mynewapplication.util.SharedPrefHelper;
 
 import java.util.Objects;
@@ -35,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         // Check if user is already logged in
         SharedPrefHelper sharedPrefHelper = SharedPrefHelper.getInstance(this);
         if (!Objects.equals(sharedPrefHelper.getUserName(), "")) {
-            startActivity(new Intent(this, HomeActivity.class));
+            startActivity(new Intent(this, TodoActivity.class));
             finish();
             return;
         }

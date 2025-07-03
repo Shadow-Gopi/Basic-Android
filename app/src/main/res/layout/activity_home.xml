@@ -17,17 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Left-aligned ImageButton inside Toolbar -->
-        <ImageButton
-            android:id="@+id/custom_logout_button"
-            android:layout_width="48dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="250dp"
-            android:src="@drawable/baseline_account_circle_24"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/logout"
-            app:tint="@android:color/white" />
-
     </androidx.appcompat.widget.Toolbar>
 
     <!-- ListView below Toolbar -->
