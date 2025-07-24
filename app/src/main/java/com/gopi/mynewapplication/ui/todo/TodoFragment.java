@@ -18,15 +18,14 @@ import androidx.navigation.Navigation;
 
 import com.gopi.mynewapplication.R;
 import com.gopi.mynewapplication.data.database.entity.TodoEntity;
-import com.gopi.mynewapplication.data.database.entity.UserEntity;
-import com.gopi.mynewapplication.databinding.FragmentSignInBinding;
+
 import com.gopi.mynewapplication.databinding.FragmentTodoBinding;
-import com.gopi.mynewapplication.ui.login.LoginViewModel;
+
 import com.gopi.mynewapplication.util.SharedPrefHelper;
 
-import java.text.ParseException;
+
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -92,6 +91,11 @@ public class TodoFragment extends Fragment {
         binding.btnAdd.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_todoFragment_to_viewFragment);
+        });
+
+        binding.btnSpeech.setOnClickListener(v ->{
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.action_todoFragment_to_speechFragment);
         });
 
 

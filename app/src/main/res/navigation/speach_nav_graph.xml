@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/speach_nav_graph"
+    app:startDestination="@id/speachFragment">
+
+    <fragment
+        android:id="@+id/speachFragment"
+        android:name="com.gopi.mynewapplication.ui.speach.SpeechFragment"
+        android:label="SpeachFragment"
+        tools:layout="@layout/fragment_speech"/>
+</navigation>

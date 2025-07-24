@@ -13,9 +13,16 @@
         <action
             android:id="@+id/action_todoFragment_to_viewFragment"
             app:destination="@id/viewFragment" />
+        <action
+            android:id="@+id/action_todoFragment_to_speechFragment"
+            app:destination="@id/speechFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewFragment"
         android:name="com.gopi.mynewapplication.ui.todo.ViewFragment"
         android:label="ViewFragment" />
+    <fragment
+        android:id="@+id/speechFragment"
+        android:name="com.gopi.mynewapplication.ui.speach.SpeechFragment"
+        android:label="SpeechFragment" />
 </navigation>
